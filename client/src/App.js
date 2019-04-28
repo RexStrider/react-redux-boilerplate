@@ -12,7 +12,7 @@ class App extends Component {
     return (      
         // <Router>
           <div>
-            <h1>Hello World {this.props.batman}</h1>
+            <h1>Hello World {this.props.counter}</h1>
             <button onClick={this.props.incrementCounter}>Increment</button>
             <button onClick={this.props.decrementCounter}>Decrement</button>
             <Random/>
@@ -23,7 +23,7 @@ class App extends Component {
 }
 
 function mapStateToProps({counter}){
-  return { batman: counter };
+  return { counter };
 }
 
 export default connect(mapStateToProps, { incrementCounter, decrementCounter })(App);
